@@ -1,0 +1,19 @@
+import sys
+# Read out the Hash(#) Comments
+def main(dict):
+    #Below is the key:value pair that is given by watson you can  seen it in the webhook node As KEY AND Corresponding Value
+    #Webhook access the data using the ----KEY----
+    #in the right top corner of try it out panel so you can access it from there
+    #replace the ----dict.get(operator)--- operator with --mathOperation--- (key of watson(webhook))
+    operator=dict.get("operator")
+    value=dict.get("Value")
+    if operator =="add" or operator == "plus" or operator == "+" or operator == "ADD" or operator == "sum" or operator == "sum":
+        answer=sum(value)
+        #key:value pair is returned to watson can be seen in context variables
+        #in the right top corner of try it out panel so you can access it from there 
+        #e.g. $web_hook_result1.body.Answer
+        print({ 'Answer': answer }) 
+    #you can make as many as 
+    elif operator == "minus" or operator == "Minus" or operator == "subtract" or operator == "Subtract" or operator == "-":
+        return { 'Answer': "Create Conditions for more operations" }
+    
